@@ -1,0 +1,82 @@
+# Logs
+**/logs
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+# Node
+**/node_modules
+**/dist
+**/dist-ssr
+**/*.local
+
+# Editor directories and files
+**/.vscode/*
+!**/.vscode/extensions.json
+**/.idea
+**/.DS_Store
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+
+# Python bytecode
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+
+# Virtual environment
+**/venv/
+**/.env
+**/.env.*
+
+# Python-specific
+**/*.pot
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Testing
+**/.coverage
+**/htmlcov/
+**/.tox/
+**/.nox/
+**/.pytest_cache/
+
+# Type checking tools
+**/.mypy_cache/
+**/.dmypy.json
+**/.pyre/
+**/.pytype/
+
+# Databases / Alembic / local dev
+**/*.sqlite3
+**/*.db
+**/alembic.ini
+**/instance/
+
+# Docker
+**/*.pid
+**/*.tar
+**/*.bak
+**/docker-compose.override.yml
+
+# PyCharm
+**/*.iml
+**/.idea/
+
+# VS Code local history
+**/.history/
+
+# Gunicorn logs
+**/gunicorn-error.log
+
+# Cache
+**/.cache/
+
+# Local configs
+**/*.local

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  backend:
+    image: gouravsaha/bookreviewapi
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      DB_URL: ${DB_URL}
+    networks:
+      - backend
+
+networks:
+  backend:

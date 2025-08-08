@@ -1,0 +1,32 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Environment folders
+.venv/
+venv/
+
+# OS or IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Git & version control
+.git
+.gitignore
+
+# Environment files (never include secrets in Docker) -->
+.env
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Dockerfiles themselves (optional)
+Dockerfile
+.dockerignore
