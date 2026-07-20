@@ -13,7 +13,8 @@ base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Film Review API",
     description="A simple Film Review API built with FastAPI.",
-    version="1.0.0"
+    version="1.0.0",
+    root_path="/dev"
 )
 
 app.include_router(user_router)
