@@ -36,4 +36,6 @@ jobs:
         run: serverless config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY_ID }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Deploy to AWS Lambda
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
         run: serverless deploy
