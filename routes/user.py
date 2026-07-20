@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException
-from crud.user import get_all_user, get_user_by_id, get_user_by_email, create_user, update_user_password, delete_user, all_books_by_user
-from schemas import UserReturn, BookReturn
+from crud.user import get_all_user, get_user_by_id, get_user_by_email, create_user, update_user_password, delete_user, all_films_by_user
+from schemas import UserReturn, FilmReturn
 from typing import List
 from sqlalchemy.orm import Session
 from db.db import get_db
@@ -19,9 +19,9 @@ def get_all_user_route(db:Session=Depends(get_db)):
 def get_user_by_email_route(email: str, db: Session = Depends(get_db)):
     return get_user_by_email(email, db)
 
-@router.get("/getAllBook", response_model=List[BookReturn])
-def get_user_books_route(id: int, db: Session = Depends(get_db)):
-    return all_books_by_user(user_id=id, db=db)
+@router.get("/getAllFilm", response_model=List[FilmReturn])
+def get_user_films_route(id: int, db: Session = Depends(get_db)):
+    return all_films_by_user(user_id=id, db=db)
 
 @router.get("/{id}", response_model=UserReturn)
 def get_user_by_id_route(id: int, db: Session = Depends(get_db)):

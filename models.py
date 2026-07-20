@@ -10,14 +10,14 @@ class User(base):
     email = Column(String, nullable=False, unique=True)
     hashed_password = Column(String, nullable=False, unique=True)
 
-    books = relationship("Book", back_populates="writer", cascade="all")
+    films = relationship("Film", back_populates="writer", cascade="all")
 
-class Book(base):
-    __tablename__ = "book"
+class Film(base):
+    __tablename__ = "film"
 
     id = Column(Integer, index=True, primary_key=True)
     name = Column(String, nullable=False)
     review = Column(Text, nullable=False)
     user_id = Column(Integer, ForeignKey("user.id"), nullable=False)
 
-    writer = relationship("User", back_populates="books")
+    writer = relationship("User", back_populates="films")

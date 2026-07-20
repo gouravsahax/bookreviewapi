@@ -51,16 +51,16 @@ def delete_user(id: int, password: str, db):
     db.commit()
     return {"msg": "User deleted"}
 
-def all_books_by_user(user_id: int, db):
+def all_films_by_user(user_id: int, db):
     user = db.query(User).filter(User.id == user_id).first()
     if not user:
         error("User not found", status.HTTP_404_NOT_FOUND)
 
     return [
         {
-            "name": book.name,
-            "review": book.review,
+            "name": film.name,
+            "review": film.review,
             "username": user.username
         }
-        for book in user.books
+        for film in user.films
     ]

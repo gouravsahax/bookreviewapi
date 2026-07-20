@@ -5,7 +5,7 @@ class UserReturn(BaseModel):
     username:str
     email:str
 
-class BookReturn(BaseModel):
+class FilmReturn(BaseModel):
     name: str
     review: str
     username: str

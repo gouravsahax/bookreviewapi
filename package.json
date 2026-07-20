@@ -1,0 +1,9 @@
+{
+  "name": "filmreviewapi",
+  "version": "1.0.0",
+  "description": "Serverless configuration for Film Review API",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-python-requirements": "^6.0.0"
+  }
+}
